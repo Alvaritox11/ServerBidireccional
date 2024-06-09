@@ -1,0 +1,178 @@
+<html>
+        <head>
+                <title>Omniseekers</title>
+                <script src="static/helper.js"></script>
+                <script src="static/client.js"></script>
+                <!--<link href="static/client.css" rel="stylesheet"/>-->
+                <link href="static/use_explain.css" rel="stylesheet"/>
+                <link href="static/cams_style.css" rel="stylesheet"/>
+                <link href="static/move_buttons.css" rel="stylesheet"/>
+                <link href="static/record_button.css" rel="stylesheet"/>
+                <link href="static/responsive.css" rel="stylesheet"/>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        </head>
+    <body>
+
+                <!-- MENU INICIAL -->
+                <section id="first_screen">
+                        <h1 id="title">Control Omniseekers Robots</h1>
+                        <img id="our_robot" src="\static\icons\omnirobot.jpg">
+                        <div id="action">
+                                <div class="start" id="start_game">
+                                        <button id="play" onclick="hideFirstScreen()"> Start Connexion </button>
+                                </div>
+                                <div class="start" id="play_specifications">
+                                        <button id="instructions" onclick="showSecondScreen()"> How to use </button>
+                                </div>
+                        </div>
+                </section>
+                <!-- Hasta aqui -->
+
+                <!-- MENU DE INSTRUCCIONES -->
+                <section id="main_explain">
+                        <button id="show_first_screen" onclick="showFirstScreen()">
+                                <img src="\static\icons\atras.png" id="atras">
+                        </button>
+                        <div id="explains">
+                                <h1 id="title">How to use</h1>
+                                <div id="explain">
+                                        <h2 id="explain_title">1. Select the camera</h2>
+                                        <p id="explain_text">You can select the camera you want to see by clicking on the "Select" button. You can select 1, 2 or 3 robots to control at the same time!</p>
+                                </div>
+                                <div id="explain">
+                                        <h2 id="explain_title">2. Talk to the robot</h2>
+                                        <p id="explain_text">You can talk to the robot by clicking on the microphone button and saying what you want (Example: right.).  The instructions will be followed by the selected robot/s.</p>
+                                </div>
+                                <div id="explain">
+                                        <h2 id="explain_title">3. Control the robot</h2>
+                                        <p id="explain_text">You can control the robot by clicking on the arrow buttons. Be carefull with the robot you are controlling!</p>
+                                </div>
+                        </div>
+                        <div id="controls">
+                                <div id="fake_cams">
+                                        <div class="fake_camera-div">
+                                                <h2 id="esp32cam1-header" class="fake_sensors-header">Omniseeker 1</h2>
+                                                <div id="wrap-esp32cam1-image" class="fake_image-wrapper">
+                                                        <img id="img-esp32cam1" src="\static\icons\foto_muestra.webp">
+                                                </div>
+                                                <button class="select-button" id="esp32cam1">Select</button>
+                                        </div>
+                                        <!-- <button class="change_cam" id="view_mobile" onclick="activarTodosLosDivs()"> Change camera </button> -->
+                                </div>
+                                <div id="fake_buttons">
+                                        <div id="record_voice">
+                                                <h2 id="record_message" class="record_header">Talk to the robot!</h2>
+                                                <button class="mic-toggle" id="micfake">
+                                                        <span class="material-icons">mic</span>
+                                                </button>
+                                        </div>
+                                        <div id="move_robot">
+                                                <h2 class="sensors-header">Control the robot!</h2>
+                                                <div class="arrow-buttons">
+                                                        <div class="row">
+                                                                <button class="fake_move-toggle" id="fake_move-up">
+                                                                        <span class="material-icons">arrow_upward</span>
+                                                                </button>
+                                                        </div>
+                                                        <div class="row">
+                                                                <button class="fake_move-toggle" id="fake_move-left">
+                                                                        <span class="material-icons">arrow_back</span>
+                                                                </button>
+                                                                <button class="fake_move-toggle" id="fake_stop">
+                                                                        <span class="material-icons-stop">STOP</span>
+                                                                </button>
+                                                                <button class="fake_move-toggle" id="fake_move-right">
+                                                                        <span class="material-icons">arrow_forward</span>
+                                                                </button>
+                                                        </div>
+                                                        <div class="row" style="margin-bottom: 10%;">
+                                                                <button class="fake_move-toggle" id="fake_move-down">
+                                                                        <span class="material-icons">arrow_downward</span>
+                                                                </button>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </section>
+                <!-- Hasta aqui -->
+
+
+                <!-- MENU PRINCIPAL -->
+                <section id="main-wrapper">
+                        <button id="show_first_screen" onclick="showFirstScreen()">
+                                <img src="\static\icons\atras.png" id="atras">
+                        </button>
+                        <!-- Para las camaras -->
+                        <div id="cams">
+                                <div id="closed_cams">
+                                        <h2 id="closed_cams-header" class="sensors-header">NOT CONNECTED TO THE ROBOT</h2>
+                                        <div id="wrap-closed_cams-image" class="image-wrapper-2">
+                                                <img id="img-closed_cams" src="\static\icons\robot_roto.jpeg">
+                                        </div>
+                                        <button id="restart_connection" onclick="rotateButton()">
+                                                <span class="material-icons">refresh</span>
+                                        </button>
+                                </div>
+                        </div>
+                        <!-- Hasta aqui -->
+
+                        <div id="buttons">
+
+                                <!-- Para el audio -->
+                                <div id="record_voice">
+                                        <h2 id="record_message" class="record_header">Talk to the robot!</h2>
+                                        <button class="mic-toggle" id="mic">
+                                                <span class="material-icons">mic</span>
+                                        </button>
+                                </div>
+                                <!-- Hasta aqui -->
+
+                                <!-- Para los movimientos -->
+                                <div id="move_robot">
+                                        <h2 class="sensors-header">Control the robot!</h2>
+                                        <div id="buttons_move">
+                                                <div class="spin-buttons" id="spin_left">
+                                                        <h3 class="sensors-header">Spin left!</h3>
+                                                        <button class="move-toggle"  id="5">
+                                                                <span class="material-icons rotate-left">refresh</span>
+                                                        </button>
+                                                </div>
+                                                <div class="arrow-buttons">
+                                                        <div class="row">
+                                                                <button class="move-toggle" id="1">
+                                                                        <span class="material-icons">arrow_upward</span>
+                                                                </button>
+                                                        </div>
+                                                        <div class="row">
+                                                                <button class="move-toggle" id="3">
+                                                                        <span class="material-icons">arrow_back</span>
+                                                                </button>
+                                                                <button class="move-toggle" id="0">
+                                                                        <span class="material-icons-stop">STOP</span>
+                                                                </button>
+                                                                </button>
+                                                                <button class="move-toggle" id="4">
+                                                                        <span class="material-icons">arrow_forward</span>
+                                                                </button>
+                                                        </div>
+                                                        <div class="row">
+                                                                <button class="move-toggle" id="2">
+                                                                        <span class="material-icons">arrow_downward</span>
+                                                                </button>
+                                                        </div>
+                                                </div>
+                                                <div class="spin-buttons" id="spin_right">
+                                                        <h3 class="sensors-header">Spin right!</h3>
+                                                        <button class="move-toggle" id="6">
+                                                                <span class="material-icons rotate-right">refresh</span>
+                                                        </button>
+                                                </div>
+                                        </div>
+                                </div>
+                                <!-- Hasta qui -->
+                        </div>
+
+                </section>
+        </body>
+</html>

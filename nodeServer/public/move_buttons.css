@@ -1,0 +1,28 @@
+button {
+    appearance: none;
+    border: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.arrow-buttons button span,
+.arrow-buttons button {
+    user-select: none;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.rotate {
+    animation: spin 1s ease-in-out;
+}

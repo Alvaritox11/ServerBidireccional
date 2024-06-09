@@ -1,0 +1,81 @@
+/* .material-icons {
+    font-size: 10px;
+} */
+
+#record_voice button span,
+#record_voice button {
+    user-select: none;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+.mic-toggle {
+    position: relative;
+    display: block;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    background-color: crimson;
+}
+
+.mic-toggle:after,
+.mic-toggle:before {
+    --pad: 0rem;
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 0;
+    background-color: rgba(220, 20, 60, 0.2);
+    top: var(--pad);
+    right: var(--pad);
+    bottom: var(--pad);
+    left: var(--pad);
+    border-radius: 50%;
+}
+
+.mic-toggle:after {
+    transition: 0.4s;
+}
+
+.mic-toggle:before {
+    transition: 0.2s;
+}
+
+.mic-toggle:hover:before {
+    --pad: -1rem;
+}
+
+.mic-toggle:hover:after {
+    --pad: -2rem;
+}
+
+.mic-toggle span{
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    font-size: 3rem;
+}
+
+.mic_toggle.is-recording:after {
+    animation: smoothPadAfter 0.6s ease-in alternate-reverse forwards infinite;
+}
+
+.mic-toggle.is-recording:before {
+    animation: smoothPadBefore 0.3s ease-in alternate-reverse forwards infinite;
+}
+
+@keyframes smoothPadAfter {
+    0% {
+        top: -1rem;
+        right: -1rem;
+        bottom: -1rem;
+        left: -1rem;
+    }
+    100% {
+        top: -0.5rem;
+        right: -0.5rem;
+        bottom: -0.5rem;
+        left: -0.5rem;
+    }
+}

@@ -1,0 +1,222 @@
+@media (max-width: 600px) {
+    #closed_cams {
+        display: flex;
+    }
+    
+    .camera-div{
+        display: none; 
+    }
+
+    #cams > div.active {
+        display: flex;
+    }
+
+    #cams {
+        flex-direction: column;
+    }
+
+    #cams > div {
+        overflow: unset;
+    }
+
+    #fake_cams > div{
+        display: flex; 
+        /* width: 110%; */
+    }
+
+    #fake_cams > div.active {
+        display: flex;
+    }
+
+    #fake_cams {
+        flex-direction: column;
+        width: 104%;
+        margin-top: 300px;
+    }
+
+    /* #fake_buttons {
+        width: 150%;
+    } */
+
+    .change_cam {
+        display: flex; /* Ocultar el botÃ³n por defecto */
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(#e52d27, #b31217);
+        border: 1px solid #9e1a15;
+        border-radius: 4px;
+        box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.5), 0 2px 5px rgba(0, 0, 0, 0.2);
+        color: white;
+        padding: 10px 20px;
+        margin: 20px;
+        font-size: 16px;
+        text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+    }
+
+    .change_cam.active {
+        display:none;
+    }
+
+    .image-wrapper {
+        flex: 1;
+        width: 90%;
+        height: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        margin-bottom: 5%;
+        /* background-image: url('images/07031a1c-0555-11ef-bc94-9fe11dba2f86.jpg'); */
+        background-repeat: no-repeat; /* Evita que la imagen se repita */
+        background-position: center center;
+    }
+    
+    .image-wrapper img {
+        max-width: 100%;
+        max-height: 100%;
+        height: 300px;
+        object-fit: contain; /* Ensure the image scales properly */
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+        border: transparent;
+    }
+
+    .fake_image-wrapper {
+        flex: 1;
+        width: 90%;
+        height: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        margin-bottom: 5%;
+        /* background-image: url('images/07031a1c-0555-11ef-bc94-9fe11dba2f86.jpg'); */
+        background-repeat: no-repeat; /* Evita que la imagen se repita */
+        background-position: center center;
+    }
+    
+    .fake_image-wrapper img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain; /* Ensure the image scales properly */
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+        border: 2px solid black;
+    }
+
+    #controls {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+    }
+
+    #controls > div {
+        width: 100%;
+    }
+
+    #fake_cams {
+        flex-direction: column;
+        width: 104%;
+    }
+    
+    #record_voice {
+        height: 90%;
+        align-items: center;
+    }
+    
+    #record_voice > h2 {
+        margin-left:15%;
+    }
+    
+    #move_robot {
+        height: 90%;
+    }
+    
+    #move_robot > h2 {
+        margin-top: 15%;
+    }
+    
+    #buttons > div {
+        overflow:hidden;
+    }
+    
+    
+    #move_robot > div {
+        margin: 0;
+    }
+    
+    .row {
+        margin-bottom: 4%;
+    }
+    .arrow-buttons button {
+        margin: 1%;
+    }
+    
+    #robot-options {
+        margin-top: -2%;
+        width: 50%;
+    }
+    
+    .select-button.active {
+        display: flex;
+        background: linear-gradient(#e52d27, #b31217);
+        border: 1px solid #9e1a15;
+        border-radius: 4px;
+        box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.5), 0 2px 5px rgba(0, 0, 0, 0.2);
+        color: white;
+        padding: 10px 20px;
+        margin: 20px;
+        font-size: 16px;
+        text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+    }
+    .select-button:hover {
+        background: rgb(144, 3, 3);
+        box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.5), 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .not_cams.active {
+        display: flex;
+    }
+
+    #action {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #our_robot {
+        border: 2px solid black;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+        border-radius: 20px;
+        height: 20%;
+        width: auto;
+        margin: 3%;
+    }
+
+    #title {
+        margin-left: 15px;
+        margin-top: 50px;
+    }
+
+    #buttons_move {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #spin_left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 16px;
+        margin-right: 0px;
+    }
+
+    #spin_right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 30px;
+        margin-left: 0px;
+    }
+}

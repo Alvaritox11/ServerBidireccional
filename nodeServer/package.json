@@ -1,0 +1,24 @@
+{
+  "name": "omniseekers",
+  "version": "1.0.0",
+  "description": "Servidor de SM. Codigo que tiene que ir dentro de la maquina virtual",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "SM"
+  ],
+  "author": "G1-6",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/vision": "^4.2.1",
+    "express": "^4.19.2",
+    "jimp": "^0.22.12",
+    "path": "^0.12.7",
+    "ws": "8.17.0",
+    "fs": "^0.0.1-security",
+    "@google-cloud/speech": "6.5.0",
+    "@google-cloud/storage": "7.11.1"
+  }
+}

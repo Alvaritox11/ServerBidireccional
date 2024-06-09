@@ -1,0 +1,77 @@
+#main_explain {
+    z-index: 3;
+    display: none;
+    flex-direction: row;
+    height: 100%;
+    background-color: #7c73e6; /* Semi-transparent background */
+}
+
+#explains {
+    width: 40%;
+    margin: 5%;
+}
+
+#explains > div {
+    margin: 10%;
+    margin-top: 20%;
+}
+
+#controls {
+    width: 40%;
+}
+
+#fake_cams{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+#fake_cams {
+    flex-direction: row;
+    align-items: center;
+}
+
+#fake_cams > div, #fake_buttons > div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow:auto;
+    margin: 10px;
+    background-color: #ffe9e3;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    border-radius: 15px; /* Smooth corners */
+}
+
+#fake_buttons > div {
+    margin: 10px;
+    height: 280px;  
+}
+
+.fake_image-wrapper {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-image: url('images/07031a1c-0555-11ef-bc94-9fe11dba2f86.jpg'); */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center center;
+}
+
+.fake_image-wrapper img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Ensure the image scales properly */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    border: 2px solid black;
+    overflow: auto;
+    margin: 10px;
+}
+
+.fake_sensors-header {
+    margin: 0; /* Remove default margin */
+    padding: 10px; /* Add some padding for better spacing */
+}

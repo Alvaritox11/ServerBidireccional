@@ -1,0 +1,79 @@
+{
+    "esp32cam1": {
+        "port": 8001,
+        "class": "cam-instance",
+        "counter": 0,
+        "frequency": 10,
+        "iteration": 0,
+        "number": 1,
+        "view": "overlay",
+        "display": "Omniseeker 1"
+    },
+
+    "esp32cam2": {
+        "port": 8002,
+        "class": "cam-instance",
+        "counter": 0,
+        "frequency": 10,
+        "iteration": 0,
+        "number": 2,
+        "view": "overlay",
+        "display": "Omniseeker 2"
+    },
+
+    "esp32cam3": {
+        "port": 8003,
+        "class": "cam-instance",
+        "counter": 0,
+        "frequency": 10,
+        "iteration": 0,
+        "number": 3,
+        "view": "overlay",
+        "display": "Omniseeker 3"
+    },
+
+    "esp32module1": {
+        "port": 8004,
+        "class": "module-instance",
+        "number": 1,
+        "selected": 0,
+        "commands": [
+            {
+                "id": "movement",
+                "name": "movement_order",
+                "class": "move",
+                "state": 0
+            }
+        ]
+    },
+   
+    "esp32module2": {
+        "port": 8005,
+        "class": "module-instance",
+        "number": 2,
+        "selected": 0,
+        "commands": [
+            {
+                "id": "movement",
+                "name": "movement_order",
+                "class": "move",
+                "state": 0
+            }
+        ]
+    },
+
+    "esp32module3": {
+        "port": 8006,
+        "class": "module-instance",
+        "number": 3,
+        "selected": 0,
+        "commands": [
+            {
+                "id": "movement",
+                "name": "movement_order",
+                "class": "move",
+                "state": 0
+            }
+        ]
+    }
+}
